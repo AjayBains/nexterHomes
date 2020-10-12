@@ -1,0 +1,57 @@
+.homes{
+    padding:20rem 0;
+    grid-column: center-start/ center-end;
+    display:grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    grid-gap: 7rem;
+   
+    
+ &__card{
+     display:grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-row-gap: 3.5rem;
+     align-items: center;
+     justify-items:center;
+     background-color: $color-grey-light-1;
+     font-size:1.7rem;
+     position:relative;
+    
+
+     &--img{
+         width:100%;
+         grid-column:1/-1;
+         grid-row:1/2;
+         
+
+     }
+     &--text{
+       grid-column:1/-1;
+       grid-row:1/2;
+        background-color:$color-secondary;
+        color:$color-grey-light-1;
+        padding:1rem .8rem;
+        width:80%;
+        text-align:center;
+        font-family: $font-display;
+        font-size:1.9rem;
+        font-weight:400;
+        justify-self:center;
+        
+        align-self:end;
+        /*position:absolute;
+        bottom :0;
+        left:50%;
+       transform: translate(-50%,50%);/*/ // works perfectly well too
+       //trying translate Y
+       transform:translateY(50%);
+        
+     }
+
+     .btn{
+        
+         grid-column:1/3;
+         justify-self: stretch;
+     }
+ }
+} 
